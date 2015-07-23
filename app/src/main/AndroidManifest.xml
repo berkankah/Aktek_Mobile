@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aktekbilisim.aktekmobile" >
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/yuvarlak67_67"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".LoginPage"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainPage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MasrafDonemGiris"
+            android:screenOrientation="portrait"  >
+        </activity>
+        <activity
+            android:name=".MasrafGiris"
+            android:screenOrientation="portrait"  >
+        </activity>
+        <activity
+            android:name=".MasrafListPage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MasrafDetay"
+            android:screenOrientation="portrait"  >
+        </activity>
+    </application>
+
+</manifest>

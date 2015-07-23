@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Aktek Mobile</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="title_activity_main_page">MainPage</string>
+    <string name="title_activity_masraf_donem_giris">MasrafDonemGiris</string>
+    <string name="title_activity_masraf_giris">MasrafGiris</string>
+    <string name="title_activity_masraf_list_page">MasrafListPage</string>
+    <string name="title_activity_masraf_detay">MasrafDetay</string>
+</resources>

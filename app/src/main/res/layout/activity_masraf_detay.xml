@@ -1,0 +1,274 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aktekbilisim.aktekmobile.MasrafDetay"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+
+    android:background="@drawable/aktek_background_md">
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtMasrafKoduDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtMasrafKoduDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Masraf Kodu"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/txtMasrafKoduDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="8"
+        android:inputType="textCapCharacters"
+        android:labelFor="@+id/dateText"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dateTextDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dateTextDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Masraf Tarihi"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/dateTextDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtMasrafKoduDetay"
+        android:layout_alignLeft="@+id/txtMasrafKoduDetay"
+        android:layout_alignRight="@+id/txtMasrafKoduDetay"
+        android:layout_alignStart="@+id/txtMasrafKoduDetay"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/txtMasrafKoduDetay"/>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtBelgeNoDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtBelgeNoDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Belge No"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtBelgeNoDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dateTextDetay"
+        android:layout_alignLeft="@+id/dateTextDetay"
+        android:layout_alignRight="@+id/dateTextDetay"
+        android:layout_alignStart="@+id/dateTextDetay"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/dateTextDetay"/>
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtFirmaAdiDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtFirmaAdiDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Firma Adı"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtFirmaAdiDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtBelgeNoDetay"
+        android:layout_alignLeft="@+id/txtBelgeNoDetay"
+        android:layout_alignRight="@+id/txtBelgeNoDetay"
+        android:layout_alignStart="@+id/txtBelgeNoDetay"
+        android:layout_below="@+id/txtBelgeNoDetay"
+        android:layout_marginTop="5dp"
+        android:inputType="textCapCharacters"/>
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtTutarDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtTutarDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Tutar(TL)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtTutarDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtFirmaAdiDetay"
+        android:layout_alignLeft="@+id/txtFirmaAdiDetay"
+        android:layout_alignRight="@+id/txtFirmaAdiDetay"
+        android:layout_alignStart="@+id/txtFirmaAdiDetay"
+        android:layout_below="@+id/txtFirmaAdiDetay"
+        android:layout_marginTop="5dp"
+        android:digits="0123456789"
+        android:inputType="number|none"/>
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtSirketAdiDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtSirketAdiDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Şirket Adı"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/txtSirketAdiDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtTutarDetay"
+        android:layout_alignLeft="@+id/txtTutarDetay"
+        android:layout_alignRight="@+id/txtTutarDetay"
+        android:layout_alignStart="@+id/txtTutarDetay"
+        android:layout_below="@+id/txtTutarDetay"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapCharacters"/>
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtAciklamaDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="                                  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtAciklamaDetay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Açıklama"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/txtAciklamaDetay"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtSirketAdiDetay"
+        android:layout_alignLeft="@+id/txtSirketAdiDetay"
+        android:layout_alignRight="@+id/txtSirketAdiDetay"
+        android:layout_alignStart="@+id/txtSirketAdiDetay"
+        android:layout_below="@+id/txtSirketAdiDetay"
+        android:layout_marginTop="5dp"
+        android:inputType="textCapCharacters"/>
+
+    <Button
+        android:id="@+id/silBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/guncelleBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:text="Sil"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/aktek_button"/>
+
+    <Button
+        android:id="@+id/guncelleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:text="Güncelle"
+        android:background="@drawable/aktek_button"/>
+</RelativeLayout>

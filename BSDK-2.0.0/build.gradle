@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('BSDK-2.0.0.aar'))
