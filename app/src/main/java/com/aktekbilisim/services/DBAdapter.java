@@ -35,7 +35,8 @@ public class DBAdapter {
 
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
-
+    private static final String IZIN_TABLE_CREATE="create table if not exists aktekIzin (id integer,kategori VARCHAR,durum integer,"
+            +"tip VARCHAR,baslangic VARCHAR,isbasi VARCHAR,vekalet VARCHAR,neden VARCHAR,haberlesme VARCHAR,acil VARCHAR,Vekalet_Aciklama VARCHAR);";
     public DBAdapter(Context ctx) {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
@@ -50,6 +51,8 @@ public class DBAdapter {
         public void onCreate(SQLiteDatabase db) {
             try {
                 db.execSQL(DATABASE_CREATE);
+                db.execSQL(IZIN_TABLE_CREATE);
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -66,6 +69,7 @@ public class DBAdapter {
 
     public DBAdapter open() throws SQLException {
         db = DBHelper.getWritableDatabase();
+        db.execSQL(IZIN_TABLE_CREATE);
         return this;
     }
 
@@ -86,13 +90,36 @@ public class DBAdapter {
 
         return db.insert(DATABASE_TABLE, null,initialValues);
     }
-
+    public long insertIzinRecord(int id,int durum,String kategori,String tip,String baslangic,String isbasi,String vekalet,String neden,String haber,String acil,String vekalet_aciklamasi)
+        {
+            ContentValues initialValues = new ContentValues();
+        initialValues.put("id", id);
+         initialValues.put("durum",durum);
+        initialValues.put("kategori", kategori);
+        initialValues.put("tip", tip);
+        initialValues.put("baslangic", baslangic);
+        initialValues.put("isbasi", isbasi);
+        initialValues.put("vekalet", vekalet);
+        initialValues.put("neden", neden);
+        initialValues.put("haberlesme", haber);
+        initialValues.put("acil", acil);
+        initialValues.put("Vekalet_Aciklama",vekalet_aciklamasi);
+return db.insert("aktekIzin",null,initialValues );
+    }
     public boolean deleteContact(long rowId) {
         return db.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
+    }
+    public boolean deleteIzin(long id)
+    {
+        return db.delete("aktekIzin","id="+id,null)>0;
     }
 
     public Cursor getAllRecords() {
         return db.query(DATABASE_TABLE, new String[]{KEY_ROWID,KEY_MASRAFKODU, KEY_DATE, KEY_BELGENO, KEY_FIRMAADI,KEY_TUTAR,KEY_SIRKETADI,KEY_DESC}, null, null, null, null, null);
+    }
+    public Cursor getAllIzinRecords()
+    {
+        return db.query("aktekIzin",new String[]{"id","kategori","durum","tip","baslangic","isbasi","vekalet","neden","haberlesme","acil","Vekalet_Aciklama"},null,null,null,null,null);
     }
 
     public Cursor getRecord(int rowId) throws SQLException {
@@ -103,6 +130,15 @@ public class DBAdapter {
             mCursor.moveToFirst();
         }
         return mCursor;
+    }
+    public Cursor getIzinRecord(int id) throws SQLException
+    {
+        Cursor mCursor=db.query(true,"aktekIzin",new String[]{"id","durum","kategori","tip","baslangic","isbasi","vekalet","neden","haberlesme","acil","Vekalet_Aciklama"},"id="+id,null,null,null,null,null);
+        if(mCursor!=null)
+        {
+            mCursor.moveToFirst();
+        }
+        return  mCursor;
     }
 
     public boolean updateRecord(int id,String masrafKodu,String date, String belgeNo, String firmaAdi,String tutar,String sirketAdi,String desc) {
@@ -115,5 +151,19 @@ public class DBAdapter {
         args.put(KEY_SIRKETADI, sirketAdi);
         args.put(KEY_DESC, desc);
         return db.update(DATABASE_TABLE, args, KEY_ROWID + "=" + id, null) > 0;
+    }
+    public boolean updateIzinRecord(int id,int durum,String kategori,String tip,String baslangic,String isbasi,String vekalet,String neden,String haber,String acil,String vekalet_aciklamasi)
+    {
+        ContentValues args = new ContentValues();
+        args.put("kategori",kategori);
+        args.put("tip",kategori);
+        args.put("baslangic",baslangic);
+        args.put("isbasi",isbasi);
+        args.put("vekalet",vekalet);
+        args.put("neden",neden);
+        args.put("haberlesme",haber);
+        args.put("acil",acil);
+        args.put("Vekalet_Aciklama",vekalet_aciklamasi);
+        return db.update("aktekIzin",args,"id="+id,null)>0;
     }
 }

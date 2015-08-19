@@ -28,7 +28,7 @@
     <ImageView
         android:layout_width="226dp"
         android:layout_height="69dp"
-        android:id="@+id/imageView2"
+        android:id="@+id/btnIzinGirisAnaEkran"
         android:src="@drawable/izin"
         android:layout_below="@+id/btnMasrafGirisAnaEkran"
         android:layout_alignStart="@+id/btnMasrafGirisAnaEkran"

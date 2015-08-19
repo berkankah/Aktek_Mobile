@@ -38,6 +38,15 @@
             android:name=".MasrafDetay"
             android:screenOrientation="portrait"  >
         </activity>
+
+        <activity
+            android:name=".IzinGiris"
+            android:screenOrientation="portrait"  >
+        </activity>
+        <activity
+            android:name=".IzinEkle"
+            android:screenOrientation="portrait"  >
+        </activity>
     </application>
 
 </manifest>
